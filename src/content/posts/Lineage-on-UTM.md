@@ -1,12 +1,12 @@
 ---
-title: 【全网首发】在 macOS/iPadOS 上用 UTM 跑原生 arm64/x86_64 Android
+title: 【全网首发】在 macOS 上用 UTM 跑原生 arm64/x86_64 Android
 published: 2026-09-05
 updated: 2026-09-13
 pinned: true
-description: 在 macOS/iPadOS 上用 UTM 跑原生 arm64/x86_64 Android
+description: 在 macOS 上用 UTM 跑原生 arm64/x86_64 Android
 tags: [教程,Linux,Android]
 category: 教程
-draft: true
+draft: false
 image: About-My-XP.assets/%E7%BA%B3%E8%A5%BF%E5%A6%B2%C2%B7%E4%BB%B0%E6%9C%88.png
 slug: Lineage-on-UTM
 author: 𝘚𝘩𝘪𝘮𝘮𝘦𝘳𝘧𝘭𝘺 · 星沫
@@ -19,10 +19,10 @@ licenseName: CC BY-NC-SA 4.0
 2. 一个终端（macOS 自带即可）
 3. `android-platform-tools` 包（建议用 `brew install android-platform-tools --cask` 装)
 4. [UTM 虚拟机 `UTM.dmg`](https://github.com/utmapp/UTM/releases/latest/download/UTM.dmg)
-5. [主虚拟机文件 `UTM-VM-lineage-xx.x-yyyymmdd-jqssun-virtio_arm64only.zip(仅 arm64 架构 - Apple Sillicon 用户)`/`UTM-VM-lineage-xx.x-yyyymmdd-jqssun-virtio_x86_64.zip(仅 x86_64 架构 - Intel Chip 用户)`](https://github.com/jqssun/android-lineage-qemu/releases/latest)
-6. [[可选] GApps Add-on `MindTheGapps-xx.x.x-arm64-yyyymmdd_xxxxxx.zip`](https://github.com/MindTheGapps/16.0.0-arm64/releases/latest)
-7. [[可选] `recovery_arm64only-userdebug.img(仅 arm64 架构 - Apple Sillicon 用户)`](https://github.com/jqssun/android-lineage-qemu/releases/latest/download/recovery_arm64only-userdebug.img)/[[可选] `recovery_x86_64-userdebug.img(仅 x86_64 架构 - Intel Chip 用户)`](https://github.com/jqssun/android-lineage-qemu/releases/latest/download/recovery_x86_64-userdebug.img) （可刷入未经验证的包（用于刷入 GApps） 的 Recovery)
-8. [[可选] `boot_arm64only.img(仅 arm64 架构 - Apple Sillicon 用户)`](https://github.com/jqssun/android-lineage-qemu/releases/latest/download/boot_arm64only.img)/[[可选] `boot_x86_64.img(仅 x86_64 架构 - Intel Chip 用户)`](https://github.com/jqssun/android-lineage-qemu/releases/latest/download/boot_x86_64.img)（Root 用）
+5. [主虚拟机文件 `UTM-VM-lineage-**.*-yyyymmdd-jqssun-virtio_arm64only.zip`*(仅 arm64 架构 - Apple Sillicon 用户)*/`UTM-VM-lineage-**.*-yyyymmdd-jqssun-virtio_*86_64.zip`*(仅 x86_64 架构 - Intel Chip 用户)*](https://github.com/jqssun/android-lineage-qemu/releases/latest)
+6. [*[可选]* GApps Add-on `MindTheGapps-**.*.*-arm64-yyyymmdd_******.zip`](https://github.com/MindTheGapps/16.0.0-arm64/releases/latest)
+7. [*[可选]* `recovery_arm64only-userdebug.img`*(仅 arm64 架构 - Apple Sillicon 用户)*](https://github.com/jqssun/android-lineage-qemu/releases/latest/download/recovery_arm64only-userdebug.img)/[*[可选]* `recovery_x86_64-userdebug.img`*(仅 x86_64 架构 - Intel Chip 用户)*](https://github.com/jqssun/android-lineage-qemu/releases/latest/download/recovery_x86_64-userdebug.img) （可刷入未经验证的刷机包（用于刷入 GApps） 的 Recovery)
+8. [*[可选]* `boot_arm64only.img`*(仅 arm64 架构 - Apple Sillicon 用户)*](https://github.com/jqssun/android-lineage-qemu/releases/latest/download/boot_arm64only.img)/[*[可选]* `boot_x86_64.img`*(仅 x86_64 架构 - Intel Chip 用户)*](https://github.com/jqssun/android-lineage-qemu/releases/latest/download/boot_x86_64.img)（Root 用）
 
 > [!CAUTION]
 >
@@ -30,7 +30,7 @@ licenseName: CC BY-NC-SA 4.0
 >
 > `Recovery` 和 `boot.img(Kernel)` **有架构区分 刷之前务必仔细核对** 否则会出事
 
-4. [[可选] KernelSU（Root 管理器） `KernelSU_vx.x.x_xxxxx-release.apk`](https://github.com/tiann/KernelSU/releases/latest)
+4. [*[可选]* KernelSU（Root 管理器） `KernelSU_v*.*.*_*****-release.apk`](https://github.com/tiann/KernelSU/releases/latest)
 
 # 设置虚拟机
 
@@ -129,13 +129,9 @@ licenseName: CC BY-NC-SA 4.0
 > >
 > > 显示当前选择的选项
 
-[grid]
-
 ![Bootloader 设置](Lineage-on-UTM.assets/Bootloader%20%E8%AE%BE%E7%BD%AE.png)
 
 ![设置](Lineage-on-UTM.assets/%E8%AE%BE%E7%BD%AE.png)
-
-[/grid]
 
 6. 如果你调过 `userdata` 分区大小的话 退出到主界面 选择 `Recovery` 并且进入
 
@@ -163,10 +159,7 @@ licenseName: CC BY-NC-SA 4.0
    Resetting memtag message...
    Data wipe complete.
    ```
-   
-   
 
-[grid]
 
 ![进入 Recovery](Lineage-on-UTM.assets/%E8%BF%9B%E5%85%A5%20Recovery.png)
 
@@ -180,9 +173,7 @@ licenseName: CC BY-NC-SA 4.0
 
 ![双清完成.png](Lineage-on-UTM.assets/%E5%8F%8C%E6%B8%85%E5%AE%8C%E6%88%90.png)
 
-[/grid]
-
-7. [可选] 安装 Google Apps
+7. *[可选]* 安装 Google Apps
 
    > [!CAUTION]
    >
@@ -201,25 +192,25 @@ licenseName: CC BY-NC-SA 4.0
    > >
    > > 所以要刷入带 `userdebug` 标签的允许刷入未经签名的包的 `Recovery`
 
-- 进入 `Recovery` 首页 - `Advanced` - `Enter fastboot` 进入 `fastbootd` 并记下上面的 `IPv4 address - 192.168.xx.x`
+- 进入 `Recovery` 首页 - `Advanced` - `Enter fastboot` 进入 `fastbootd` 并记下上面的 `IPv4 address - 192.168.**.*`
 
-- 进入到 `Fastbootd` 首页 记下上面的 `IPv4 address - 192.168.xx.x`
+- 进入到 `Fastbootd` 首页 记下上面的 `IPv4 address - 192.168.**.*`
 
 - 接着打开终端
 
-  ```fish
+  ```bash
    fastboot -s tcp:$HOST_IP flash recovery /path/to/recovery_arm64only-userdebug.img    # 把 $HOST_IP 替换成 Fastboot 里面给你的 IP /path/to/recovery_arm64only-userdebug.img 替换成你下载的 Recovery 镜像的位置
   ```
 
   - 输出应该类似这样：
 
-  ```fish
+  ```bash
   Sending 'vendor_boot' (59492 KB)                   OKAY [  0.132s]
   Writing 'vendor_boot'                              OKAY [  0.068s]
   Finished. Total time: 0.251s
   ```
 
-- `Fastbootd` 里选择 `Power off` 关机 重启再启动到 `Recovery` - `Apply update` - `Apply from ADB` - 再次记下上面的 `IPv4 address - 192.168.xx.x
+- `Fastbootd` 里选择 `Power off` 关机 重启再启动到 `Recovery` - `Apply update` - `Apply from ADB` - 再次记下上面的 `IPv4 address - 192.168.**.*
 
   > [!TIP]
   >
@@ -233,32 +224,32 @@ licenseName: CC BY-NC-SA 4.0
 
 - 底下显示 `Now send the package you want to apply to the device with "adb sideload <filename>"...` 时打开终端
 
-  ``` fish
+  ``` bash
    adb connect $HOST_IP    # 把 $HOST_IP 替换成 Recovery 里面给你的 IP
   ```
 
   - 输出应该类似这样：
 
-  ```fish
+  ```bash
   * daemon not running; starting now at tcp:5037
   * daemon started successfully
-  connected to 192.168.64.3:5555
+  connected to 192.168.**.*:5555
   ```
 
   - 接下来用 `adb devices` 检查是否连接上：
 
-  ```fish
+  ```bash
    adb devices
   List of devices attached
-  192.168.xx.x:5555       recovery
+  192.168.**.*:5555       recovery
   ```
 
   - 显示如上则已连接上
 
   - 接下来开始侧载：
 
-  ```fish
-  adb sideload -h /path/to/MindTheGapps-xx.x.x-arm64-yyyymmdd_xxxxxx.zip    # 把 /path/to/MindTheGapps-xx.x.x-arm64-yyyymmdd_xxxxxx.zip 替换成你下载的 GApps 包的位置
+  ```bash
+  adb sideload -h /path/to/MindTheGapps-**.*.*-arm64-yyyymmdd_******.zip    # 把 /path/to/MindTheGapps-**.*.*-arm64-yyyymmdd_******.zip 替换成你下载的 GApps 包的位置
   ```
 
   - `Recovery` 里会提示
@@ -312,7 +303,7 @@ licenseName: CC BY-NC-SA 4.0
 
 - 当 UI 再次出现 `Recovery` 日志提示
   
-  ```   Recovery
+  ```Recovery
   Cleaning up files
   Unmounting partitions
   Done!
@@ -334,9 +325,9 @@ licenseName: CC BY-NC-SA 4.0
 
 ![重启系统](Lineage-on-UTM.assets/%E9%87%8D%E5%90%AF%E7%B3%BB%E7%BB%9F.png)
 
-# 系统设置和 Root
+# *[可选]* Root
 
-1. `bootloader` 里选择第一项 `LineageOS xx.x` 进系统
+1. `bootloader` 里选择第一项 `LineageOS **.*` 进系统
 2. 第一次启动系统可能会比较慢 特别是你选择了装 GApps 的时候 具体时长与电脑性能有关
 
 ![第一次启动.png](Lineage-on-UTM.assets/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%90%AF%E5%8A%A8.png)
@@ -365,3 +356,113 @@ licenseName: CC BY-NC-SA 4.0
 
 5. 打开终端
 
+  ``` bash
+   adb connect $HOST_IP    # 把 $HOST_IP 替换成 Recovery 里面给你的 IP
+  ```
+
+  - 输出应该类似这样：
+
+  ```bash
+  * daemon not running; starting now at tcp:5037
+  * daemon started successfully
+  connected to 192.168.**.*:5555
+  ```
+
+  接下来用 `adb devices` 检查是否连接上：
+
+  ```bash
+   adb devices
+  List of devices attached
+  192.168.**.*:5555       recovery
+  ```
+
+  - 显示如上则已连接上
+
+6. 安装 `KernelSU` Manager
+
+  ```bash
+   adb -e install /path/to/KernelSU_v*.*.*-**-g******ab_*****-release.apk    # 把 /path/to/KernelSU_v*.*.*-**-g******ab_*****-release.apk 换成你下载的管理器路径
+  ```
+
+  - 输出应该类似这样：
+
+  ```bash
+  Performing Streamed Install
+  Success
+  ```
+
+7. 推送 `boot.img` 到虚拟机并修补
+
+  ```bash
+   adb -e push /path/to/boot_*.img /sdcard    # 把 /path/to/boot_*.img 换成你下载的 boot.img 路径
+  ```
+  - 输出应该类似这样：
+
+  ```bash
+  /path/to/boot_*.img: 1 file pushed, 0 skipped. ** MB/s (46219264 bytes in 0.100s)
+  ```
+
+8. 打开 `KernelSU` 管理器 - `选择文件并修补` - 选择 `boot.img` - *[可选]*`备份为原厂镜像`&`总是给 Shell 授予 Root 权限`&`启动时强制启用 ADB 调试` - `下一步` - `KMI` 选择见下
+
+  > [!TIP]
+  >
+  >  如何查看 `KMI`
+  >
+  > 见 [KernelSU 官方文章](https://kernelsu.org/zh_CN/guide/installation.html#kmi)
+
+  记住圈出来的路径
+
+  ![修补设置](Lineage-on-UTM.assets/%E4%BF%AE%E8%A1%A5%E8%AE%BE%E7%BD%AE.png)
+
+  ![修补完成](Lineage-on-UTM.assets/%E4%BF%AE%E8%A1%A5%E5%AE%8C%E6%88%90.png)
+
+  - 输出应该类似这样：
+
+  ```bash
+    _  __                    _ ____  _   _ 
+   | |/ /___ _ __ _ __   ___| / ___|| | | |
+   | ' // _ \ '__| '_ \ / _ \ \___ \| | | |
+   | . \  __/ |  | | | |  __/ |___) | |_| |
+   |_|\_\___|_|  |_| |_|\___|_|____/ \___/ 
+  
+  - Bootdevice: /data/data/me.weishu.kernelsu/cache/boot.img
+  - Preparing assets
+  - Unpacking boot image
+  - KMI: android16-6.12
+  - Adding KernelSU LKM
+  - Backup stock boot image
+  - Stock image has been backup to
+  - /data/user_de/0/me.weishu.kernelsu/boot_backup/ksu_backup_*
+  - Adding allow shell config
+  - Adding adb_debug props
+  - Adding props to enable adbd
+  - Repacking boot image
+  - Output file is written to
+  - /storage/emulated/0/Download/kernelsu_patched_yyyymmdd_*.img     # ⬅️ 记住这行
+  - Done!
+  ```
+
+9. 从虚拟机拉取修补好的 `boot.img` 并刷入
+- 终端输入 `adb -d pull /storage/emulated/0/Download/kernelsu_patched_yyyymmdd_*.img ./     # 把 /storage/emulated/0/Download/kernelsu_patched_yyyymmdd_*.img` 换成你刚刚记的目录
+
+- 重启虚拟机 - `LineageOS **.* Recovery` - `Advamced` - `Enter fastboot` 进入 `Fastbootd`
+
+- `fastboot -s $HOST_IP flash boot kernelsu_patched_yyyymmdd_*.img` 直接刷入
+  - 输出应该类似这样：
+  ```bash
+  Sending 'boot' (45616 KB)                          OKAY [  0.127s]
+  Writing 'boot'                                     OKAY [  0.270s]
+  Finished. Total time: 0.546s
+  ```
+  
+- 选择 `Reboot system now` 重启系统
+
+![开机日志](Lineage-on-UTM.assets/%E5%90%AF%E5%8A%A8%E6%97%A5%E5%BF%97.png)
+
+如果你在开机日志里看到了 `KernelSU: *` 证明成功了
+
+![大功告成！.png](Lineage-on-UTM.assets/%E5%A4%A7%E5%8A%9F%E5%91%8A%E6%88%90%EF%BC%81.png)
+
+# Enjoy!
+
+把搞好的 `.utm` 虚拟机包传到 iPad 上 用 UTM 导入即可在 iPad 上享受 Android Tablet 了（）
