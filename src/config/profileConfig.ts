@@ -12,7 +12,7 @@ export const profileConfig: ProfileConfig = {
 	name: "𝘚𝘩𝘪𝘮𝘮𝘦𝘳𝘧𝘭𝘺 · 星沫",
 
 	// 个人签名
-	bio: "我会看到 飞萤之火自无梦的长夜亮起 绽放在终竟的明天",
+	bio: "呀 被你发现了喵～ 🎉 这里是究极无敌巨™可爱的沫沫子喵（大声！） ੭ ᐕ)੭*",
 
 	// 链接配置
 	// 已经预装的图标集：fa7-brands，fa7-regular，fa7-solid，material-symbols，simple-icons
