@@ -9,30 +9,13 @@ category: 教程
 draft: false
 image: About-My-XP.assets/%E7%BA%B3%E8%A5%BF%E5%A6%B2%C2%B7%E4%BB%B0%E6%9C%88.png
 slug: Lineage-on-UTM
-author: 𝘚𝘩𝘪𝘮𝘮𝘦𝘳𝘧𝘭𝘺 · 星沫
+author: 𝘚𝘩𝘪𝘮𝘮𝘦𝘳𝘧𝘭𝘺 · 星沫&Tedangi
 licenseName: CC BY-NC-SA 4.0
 ---
 
 # 准备工作
 
 > 本教程用于在 macOS 上通过 UTM 运行原生 arm64/x86_64 Android。
-
-## 目录
-
-- [准备工作](#准备工作)
-  - [下载所需文件](#下载所需文件)
-- [设置虚拟机](#设置虚拟机)
-  - [调整虚拟机存储](#调整虚拟机存储)
-  - [调整 CPU 与内存](#调整-cpu-与内存)
-  - [配置 Bootloader](#配置-bootloader)
-  - [初始化 userdata 分区](#初始化-userdata-分区)
-  - [安装 Google Apps](#安装-google-apps)
-    - [刷入 userdebug Recovery](#刷入-userdebug-recovery)
-    - [通过 ADB 侧载 GApps](#通过-adb-侧载-gapps)
-- [Root](#-root)
-  - [进入系统并开启 ADB](#进入系统并开启-adb)
-  - [安装并配置 KernelSU](#安装并配置-kernelsu)
-  - [刷入修补后的 boot.img](#刷入修补后的-bootimg)
 
 ## 下载所需文件
 
