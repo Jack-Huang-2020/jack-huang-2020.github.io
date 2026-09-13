@@ -19,19 +19,19 @@ licenseName: CC BY-NC-SA 4.0
 
 ## 下载所需文件
 
-| # | 所需文件 / 项目 | 说明 | 下载 |
-|---:|---|---|---|
-| 1 | **Mac 电脑** | 一台 Mac | — |
-| 2 | **终端** | macOS 自带即可 | — |
-| 3 | **`android-platform-tools`** | 建议使用 `brew install android-platform-tools --cask` 安装 | — |
-| 4 | **`UTM.dmg`** | 所有 Mac · UTM 虚拟机 | [utmapp/UTM](https://github.com/utmapp/UTM) |
-| 5 | **`UTM-VM-lineage-**.*-yyyymmdd-jqssun-virtio_arm64only.zip`** | 主虚拟机文件 · arm64 · Apple Silicon | [jqssun/android-lineage-qemu](https://github.com/jqssun/android-lineage-qemu) |
-| 5 | **`UTM-VM-lineage-**.*-yyyymmdd-jqssun-virtio_*86_64.zip`** | 主虚拟机文件 · x86_64 · Intel Chip | [jqssun/android-lineage-qemu](https://github.com/jqssun/android-lineage-qemu) |
-| 6 | **`MindTheGapps-**.*.*-arm64-yyyymmdd_******.zip`** | *可选* · GApps Add-on · arm64 · Apple Silicon | [MindTheGapps/16.0.0-arm64](https://github.com/MindTheGapps/16.0.0-arm64) |
-| 7 | **`recovery_arm64only-userdebug.img`** | *可选* · 用于刷入未经验证的刷机包（用于刷入 GApps）的 Recovery · arm64 · Apple Silicon | [jqssun/android-lineage-qemu](https://github.com/jqssun/android-lineage-qemu) |
-| 7 | **`recovery_x86_64-userdebug.img`** | *可选* · 用于刷入未经验证的刷机包（用于刷入 GApps）的 Recovery · x86_64 · Intel Chip | [jqssun/android-lineage-qemu](https://github.com/jqssun/android-lineage-qemu) |
-| 8 | **`boot_arm64only.img`** | *可选* · Root 用 · arm64 · Apple Silicon | [jqssun/android-lineage-qemu](https://github.com/jqssun/android-lineage-qemu) |
-| 8 | **`boot_x86_64.img`** | *可选* · Root 用 · x86_64 · Intel Chip | [jqssun/android-lineage-qemu](https://github.com/jqssun/android-lineage-qemu) |
+| 所需文件 / 项目 | 说明 | 下载 |
+|---|---|---|
+|  **Mac 电脑**  |  一台 Mac  |  —  |
+|  **终端**  |  macOS 自带即可  |  —  |
+|  **`android-platform-tools`**  |  建议使用 `brew install android-platform-tools --cask` 安装  |  —  |
+|  **`UTM.dmg`**  |  所有 Mac · UTM 虚拟机  |  [utmapp/UTM](https://github.com/utmapp/UTM)  |
+|  **`UTM-VM-lineage-**.*-yyyymmdd-jqssun-virtio_arm64only.zip`**  |  主虚拟机文件 · arm64 · Apple Silicon  |  [jqssun/android-lineage-qemu](https://github.com/jqssun/android-lineage-qemu)  |
+|  **`UTM-VM-lineage-**.*-yyyymmdd-jqssun-virtio_*86_64.zip`**  |  主虚拟机文件 · x86_64 · Intel Chip  |  [jqssun/android-lineage-qemu](https://github.com/jqssun/android-lineage-qemu)  |
+|  **`MindTheGapps-**.*.*-arm64-yyyymmdd_******.zip`**  |  *可选* · GApps Add-on · arm64 · Apple Silicon  |  [MindTheGapps/16.0.0-arm64](https://github.com/MindTheGapps/16.0.0-arm64)  |
+|  **`recovery_arm64only-userdebug.img`**  |  *可选* · 用于刷入未经验证的刷机包（用于刷入 GApps）的 Recovery · arm64 · Apple Silicon  |  [jqssun/android-lineage-qemu](https://github.com/jqssun/android-lineage-qemu)  |
+|  **`recovery_x86_64-userdebug.img`**  |  *可选* · 用于刷入未经验证的刷机包（用于刷入 GApps）的 Recovery · x86_64 · Intel Chip  |  [jqssun/android-lineage-qemu](https://github.com/jqssun/android-lineage-qemu)  |
+|  **`boot_arm64only.img`**  |  *可选* · Root 用 · arm64 · Apple Silicon  |  [jqssun/android-lineage-qemu](https://github.com/jqssun/android-lineage-qemu)  |
+|  **`boot_x86_64.img`**  |  *可选* · Root 用 · x86_64 · Intel Chip  |  [jqssun/android-lineage-qemu](https://github.com/jqssun/android-lineage-qemu)  |
 > [!CAUTION]
 >
 > GApps 仅有 `arm64` 架构 **如果你是 Intel Chip 用户 不要想了 没有你们对应架构的 GApps** 如果安装了不对应架构的 GApps 系统将会 `bootloop`
