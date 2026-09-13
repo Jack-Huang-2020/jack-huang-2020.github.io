@@ -115,7 +115,7 @@ licenseName: CC BY-NC-SA 4.0
 > >
 > > 是否打开虚拟 Wi-Fi 功能 默认关闭 **必须选择 `VirtWifi using eth0 interface` 否则无法打开无线调试 无法 `adb`**
 > >
-> > ![不安全的 adb](Lineage-on-UTM.assets/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%20adb.png)
+> > ![虚拟 WiFi](Lineage-on-UTM.assets/%E8%99%9A%E6%8B%9F%20WiFi.png)
 >
 > > **`ZRAM`**
 > >

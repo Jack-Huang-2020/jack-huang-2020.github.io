@@ -79,7 +79,7 @@ export const profileConfig: ProfileConfig = {
 			name: "RSS",
 			icon: "material-symbols:rss-feed-rounded",
 			url: "/rss/",
-			showName: true,
+			showName: false,
 		},
 		{
 			name: "Atom",
